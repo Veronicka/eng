@@ -1,0 +1,18 @@
+<div>
+  <div class="well">
+    <h1 class="text-center">Inserir Vinil </h1>
+
+    <form role="form" ng-submit="salvar()">
+      <fieldset ng-disabled="salvandoCategoriaFlag">
+        <div class="form-group" ng-class="{'has-error':erros.nome}">
+          <label for="nomeInput" class="control-label">Nome </label>
+          <input id="nomeInput" type="text" class="form-control" ng-model="categoria.nome">
+          <span class="help-block">{{erros.nome}}</span></div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <img src="img/ajax-loader.gif" ng-show="salvandoCategoriaFlag"/>
+      </fieldset>
+    </form>
+  </div>
+  <a href="/categorias/new" class="btn btn-success">Create New Categoria</a>
+</div>
